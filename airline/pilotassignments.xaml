@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="airline.pilotassignments"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="454" d:DesignWidth="895">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="106*" />
+            <ColumnDefinition Width="789*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="379*" />
+            <RowDefinition Height="35" />
+        </Grid.RowDefinitions>
+        <ComboBox Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="0,12,0,0" Name="name" VerticalAlignment="Top" Width="120" />
+        <DatePicker Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="155,13,0,0" Name="datePicker1" VerticalAlignment="Top" Width="115" SelectedDateFormat="Short" DisplayDate="12/2/2012" />
+        <Button Content="Get Assignments" Grid.Column="1" Height="Auto" HorizontalAlignment="Left" Margin="424,14,0,0" Name="get" VerticalAlignment="Top" Width="Auto" Click="get_Click" />
+        <Label Content="from" Grid.Column="1" Height="28" HorizontalAlignment="Left" Margin="119,11,0,0" Name="label1" VerticalAlignment="Top" Grid.RowSpan="2" />
+        <Label Content="to" Height="28" Margin="276,10,0,0" Name="label2" VerticalAlignment="Top" Grid.Column="1" HorizontalAlignment="Left" Width="21" />
+        <DatePicker Height="23" HorizontalAlignment="Left" Margin="305,14,0,0" Name="datePicker2" VerticalAlignment="Top" Width="115" Grid.Column="1" />
+        <Button Content="Home" Grid.Column="1" Grid.Row="2" Height="23" HorizontalAlignment="Left" Name="home" VerticalAlignment="Top" Width="75" Margin="345,0,0,0" Click="home_Click" />
+        <DataGrid AutoGenerateColumns="True" Grid.Row="1" Height="Auto" HorizontalAlignment="Left" Name="dataGrid1" VerticalAlignment="Top" Width="Auto" Grid.ColumnSpan="2" Margin="12,0,0,0" DataContext="{Binding}" ItemsSource="{Binding}" Visibility="Hidden" GridLinesVisibility="None" AlternatingRowBackground="#00000000" />
+        <ComboBox Height="Auto" HorizontalAlignment="Left" Margin="12,12,0,0" Name="type" VerticalAlignment="Top" Width="Auto" SelectionChanged="comboBox1_SelectionChanged">
+            <ComboBoxItem Content="Pilot" />
+            <ComboBoxItem Content="Flight Attendant" />
+            <ComboBoxItem Content="Maintenance" />
+            <ComboBoxItem Content="Luggage" />
+        </ComboBox>
+    </Grid>
+</UserControl>
