@@ -13,6 +13,7 @@
             <ComboBoxItem Content="Luggage Information" />
             <ComboBoxItem Content="Assignment" />
             <ComboBoxItem Content="Availability" />
+            <ComboBoxItem Content="Add Flight" />
         </ComboBox>
         <Button Content="Go!" Height="30" HorizontalAlignment="Left" Margin="560,0,0,362" Name="go" VerticalAlignment="Bottom" Width="184" Click="go_Click" />
         <Label Content="Welcome to Air Calgary Operations" Height="Auto" HorizontalAlignment="Left" Margin="407,109,0,0" Name="label1" VerticalAlignment="Top" Width="Auto" FontSize="30" />

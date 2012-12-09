@@ -23,7 +23,7 @@ namespace airline
         public MainWindow main;
         public int type;
         public string name;
-        public Assignment(MainWindow m, int t, string name)
+        public Assignment(MainWindow m, int t, string name, string date)
         {
             InitializeComponent();
             main = m;
@@ -32,7 +32,7 @@ namespace airline
 
             if (t == 1)
             {
-                MySqlCommand f = new MySqlCommand("SELECT FLIGHT_NAME FROM flight", main.con);
+                MySqlCommand f = new MySqlCommand("SELECT FLIGHT_NAME FROM flight as f where date(f.departure_time) = str_to_date('"+date+"','%d/%m/%Y')", main.con);
                 DataSet ds1 = new DataSet();
                 MySqlDataAdapter da1 = new MySqlDataAdapter(f);
                 da1.Fill(ds1);
@@ -42,7 +42,7 @@ namespace airline
             }
             else
             {
-                MySqlCommand f = new MySqlCommand("SELECT flight.FLIGHT_NAME FROM pilot, can_fly, flight where pilot.NAME = '"+name+"' and pilot.PID = can_fly.PILOT_ID and can_fly.AIRCRAFT_ID = flight.AIRCRAFT_ID", main.con);
+                MySqlCommand f = new MySqlCommand("SELECT f.FLIGHT_NAME FROM pilot, can_fly, flight as f where pilot.NAME = '" + name + "' and pilot.PID = can_fly.PILOT_ID and can_fly.AIRCRAFT_ID = f.AIRCRAFT_ID and date(f.departure_time) = str_to_date('" + date + "','%d/%m/%Y')", main.con);
                 DataSet ds1 = new DataSet();
                 MySqlDataAdapter da1 = new MySqlDataAdapter(f);
                 da1.Fill(ds1);

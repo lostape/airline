@@ -25,3 +25,7 @@ C:\Users\mikmister02\school\cpsc471\airline\airline\obj\x86\Debug\luggage.baml
 C:\Users\mikmister02\school\cpsc471\airline\airline\obj\x86\Debug\luggage.g.cs
 C:\Users\mikmister02\school\cpsc471\airline\airline\obj\x86\Debug\availability.baml
 C:\Users\mikmister02\school\cpsc471\airline\airline\obj\x86\Debug\availability.g.cs
+C:\Users\mikmister02\school\cpsc471\airline\airline\bin\Debug\WPFToolkit.Extended.dll
+C:\Users\mikmister02\school\cpsc471\airline\airline\obj\x86\Debug\addflight.baml
+C:\Users\mikmister02\school\cpsc471\airline\airline\obj\x86\Debug\addflight.g.cs
+C:\Users\mikmister02\school\cpsc471\airline\airline\bin\Debug\Xceed.Wpf.DataGrid.dll

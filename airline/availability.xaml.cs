@@ -47,13 +47,13 @@ namespace airline
 
         private void button2_Click(object sender, RoutedEventArgs e)
         {
-            Assignment a = new Assignment(main, 0, (dataGrid1.SelectedItem as DataRowView).Row.ItemArray[0].ToString());
+            Assignment a = new Assignment(main, 0, (dataGrid1.SelectedItem as DataRowView).Row.ItemArray[0].ToString(),datePicker1.SelectedDate.ToString());
             a.Show();
         }
 
         private void button3_Click(object sender, RoutedEventArgs e)
         {
-            Assignment a = new Assignment(main, 1, (dataGrid2.SelectedItem as DataRowView).Row.ItemArray[0].ToString());
+            Assignment a = new Assignment(main, 1, (dataGrid2.SelectedItem as DataRowView).Row.ItemArray[0].ToString(),datePicker1.SelectedDate.ToString());
             a.Show();
         }
 

@@ -49,6 +49,10 @@ namespace airline
                 case 4:
                     main.Content = new availability(main);
                     break;
+                case 5:
+                    addflight a = new addflight(main);
+                    a.Show();
+                    break;
             }
         }
 
